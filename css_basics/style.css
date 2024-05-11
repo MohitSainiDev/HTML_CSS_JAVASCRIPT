@@ -1,0 +1,18 @@
+body {
+    background: rgb(142, 74, 29);
+}
+h1{
+    background: rgb(13, 56, 196);
+    text-align: center;
+}
+p {
+    font-size: 20px;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color: yellow;
+    text-decoration: underline;
+}
