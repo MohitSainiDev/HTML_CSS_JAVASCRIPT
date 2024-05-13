@@ -1,0 +1,90 @@
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.block-labels{
+    display:block;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+h1{
+    text-align: center;
+    color: black;
+}
+
+form{
+    /* background-color: rgb(14, 133, 193); */
+}
+
+
+
+.my-form{
+    height: 100vb;
+    background-color: rgb(224, 136, 126);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+input{
+    font-size: 1.5rem;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+    border: none;
+
+}
+
+#sign-btn{
+    display: block;
+    margin-bottom: 1rem;
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;
+    background-color: rgb(45, 112, 77);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+#sign-btn:hover{
+    background-color: rgb(53, 61, 53);
+}
+
+
+#signup{
+    display: block;
+    padding: 10px;
+    font-size: 14px;
+    width: 93%;
+    background-color: rgb(84, 33, 172);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+
+
+}
+
+
+#login-checkbox{
+    margin: 12px;
+    color:black;
+}
+
+.my-border{
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px black;
+    background-color: rgb(38, 199, 211);
+}
+

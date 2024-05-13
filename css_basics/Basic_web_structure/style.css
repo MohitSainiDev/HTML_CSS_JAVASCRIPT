@@ -1,0 +1,94 @@
+body{
+    background-color: rgb(233, 232, 176);
+
+}
+body,h1,p,h2,a,ul,link{
+    margin: 0;
+}
+
+header{
+    background-color: green;
+    text-align: center;
+}
+
+nav{
+    background-color: rgb(94, 94, 178);
+    height: 40px;
+    display: flex;
+    flex-direction: inline;
+    align-items: center;
+    justify-content: center; 
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+    background-color:red ;
+    border-radius: 5px;
+    text-align: center;
+
+}
+nav a:hover{
+    background-color: blue;
+}
+section{
+    background-color:pink ;
+    height: 250px;
+    text-align: center;
+}
+section h1{
+    margin-bottom: 20px;
+}
+button{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: bisque;
+    border-style:dashed;
+    
+    
+}
+button:hover{
+  cursor: pointer;
+}
+
+article{
+    background: rgb(34, 176, 247);
+    width: 70%;
+    float: left;
+    height: 200px;
+
+    display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center; 
+}
+
+aside{
+   background-color:rgb(140, 98, 36) ;
+    width: 30%;
+    float: left;
+    height: 200px;
+}
+
+footer{
+    clear: both;
+    background-color:gray ;
+    height: 90px;
+    display: flex;
+    flex-direction: inline;
+    align-items: center;
+    justify-content: center; 
+}
+footer a{
+    color: white;
+    margin: 5px;
+    background-color:rgb(211, 79, 180) ;
+    border-radius: 5px;
+
+   
+}
+
+.post{
+background-color: whitesmoke;
+}
