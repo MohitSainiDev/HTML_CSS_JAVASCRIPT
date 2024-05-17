@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+    
+     body{
+        margin: 20px;
+        text-align: center;
+     
+        
+     }
+
+     .box{
+        padding: 20px;
+        margin: 10px;
+     
+     }
+
+     @media screen and (min-width:1200px) {
+        .box{
+            background-color: saddlebrown;
+        }
+        
+     }
+
+     @media screen and (max-width:1199px) and (min-width:768px) {   
+        .box{
+            background-color: blue;
+        }
+        
+        
+     }
+
+
+     @media screen and (max-width:768px) {
+        .box{
+            background-color:red
+        }
+        
+        
+     }
+
+    </style>
+
+</head>
+<body>
+    
+   <h1>Media Queries</h1>
+   <div class="box">
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil sint, voluptatum alias vel dolorem voluptatibus! Numquam sapiente perspiciatis aperiam culpa nam repellendus blanditiis neque consectetur velit. Dolore delectus reprehenderit tempora.</p>
+   </div>
+
+</body>
+</html>

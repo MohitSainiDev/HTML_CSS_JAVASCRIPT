@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding FlexBox</title>
+</head>
+<body>
+    <h1>Flexbox</h1>
+
+    <div class="container">
+        <div class="box box1">
+
+        </div>
+        <div class="box box2">
+            
+        </div>
+        <div class="box box3">
+            
+        </div>
+    </div>
+
+    <style>
+       
+       .container{
+        height: 300px;
+        width: 100%;
+        background-color: bisque;
+        display: flex;
+        justify-content: space-evenly;
+      
+        
+       }
+
+       .box{
+        height: 80px;
+        width: 88px;
+        background-color: red;
+        border: 2px solid black;
+       }
+
+       .box1{
+         background-color: aqua;
+         flex :1 ;
+       }
+       .box2{
+         background-color: rgb(255, 0, 234);
+         flex :2 ;
+       }
+       .box3{
+         background-color: rgb(0, 255, 85);
+         flex :1 ;
+       }
+    </style>
+    
+</body>
+</html>
