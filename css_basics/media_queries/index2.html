@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+</head>
+<body>
+    
+
+    <header>
+        <h1>My Website</h1>
+    </header>
+
+    <div class="container">
+        <div class="box">Box1</div>
+        <div class="box">Box2</div>
+        <div class="box">Box3</div>
+        <div class="box">Box4</div>
+        <div class="box">Box5</div>
+        <div class="box">Box6</div>
+    </div>
+
+    <style>
+
+        body{
+            margin:0;
+        }
+
+        header{
+            background-color: black;
+            padding:20px;
+            
+        }
+
+        h1{
+            color: white;
+
+        }
+
+        .container{
+            text-align: center;
+            background-color: rgb(127, 127, 145);
+            height: 200px;
+            width: auto;
+        }
+
+        .box{
+            background-color: aliceblue;
+            margin: 10px;
+            text-align: center;
+            width: 25%;
+            display: inline-block;
+        }
+
+        @media screen and (min-width:1200px) {
+        .box{
+            width: 45%;
+        }
+        
+     }
+
+     @media screen and (max-width:1199px) and (min-width:768px) {   
+        .box{
+            width: 30%;
+        
+        }
+        
+        
+     }
+
+
+     @media screen and (max-width:768px) {
+        .box{
+            width: 45%;
+            display: block;
+        }
+    }
+    </style>
+</body>
+</html>
