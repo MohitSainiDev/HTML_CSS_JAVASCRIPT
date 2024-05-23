@@ -1,0 +1,27 @@
+
+table,table thead th,table tbody tr td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+body{
+    height: 100vh;
+    width: 100vh;
+    background-color: rgb(208, 208, 184);
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.container1{
+   
+}
+
+.container2{
+    background-color: rgb(116, 116, 154);
+    display:flex;
+    justify-content: center;
+    text-align: center;
+}
+

@@ -1,0 +1,30 @@
+.container{
+    background-color: steelblue;
+    height: 60px;
+    width: 80%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.container2{
+    background-color: rgb(10, 177, 52);
+   
+    
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
