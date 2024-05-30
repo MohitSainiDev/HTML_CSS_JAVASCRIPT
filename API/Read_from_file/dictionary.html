@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary Api</title>
+</head>
+<body>
+    
+<h1>Dictionary Api</h1>
+<input type="text" id="inputWord" placeholder="Enter a word">
+<button id="btnDefine">Submit</button>
+
+<ul id="meaning">
+</ul>
+
+    <script>
+
+let inputWord=document.querySelector("#inputWord")
+let ul=document.querySelector("#meaning")
+let btnDefine=document.querySelector("#btnDefine")
+
+btnDefine.addEventListener('click',function(){
+let existingLi=document.querySelector("li")
+
+    if(existingLi)
+    {
+        existingLi.remove()
+    }
+    let words=inputWord.value
+
+    if(words.trim()=="")
+    alert("Enter a word")
+
+    else{
+
+    fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${words}`).then((response)=>{
+    return response.text()
+}).then((data)=>{
+    const myData=JSON.parse(data)
+    console.log(myData[0].meanings[0].definitions[0].definition)
+
+    let li=document.createElement("li")
+    li.innerHTML=myData[0].meanings[0].definitions[0].definition
+    ul.appendChild(li)
+    
+
+}).catch((error)=>{
+    console.error("Failed to get data",error)
+})
+}
+}
+)
+
+
+    </script>
+</body>
+</html>

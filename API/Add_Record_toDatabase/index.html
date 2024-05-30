@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API:Add a record to a database</title>
+</head>
+
+<style>
+table,td,th{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    margin-top: 5px;
+}
+</style>
+
+
+<body>
+    <h2>Add a record to a database</h2>
+<form id="my-form">
+    <input type="text" name="name" placeholder="Enter Name">
+    <br>
+    <br>
+    <input type="email" name="email" placeholder="Enter Enail">
+    <br>
+    <br>
+    <button type="submit">Submit</button>
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>email</th>
+        </tr>
+    </thead>
+    <tbody id="dataHolder">
+      
+    </tbody>
+</table>
+   
+<script>
+    const myForm=document.querySelector("#my-form")
+    const myBody=document.querySelector("#dataHolder")
+
+    fetch(`https://api-db-afd53-default-rtdb.asia-southeast1.firebasedatabase.app/users.json`).then((response)=>{
+    return response.text()
+}).then((data)=>{
+    const myData=JSON.parse(data)
+for(const key in myData ){
+  let tr=document.createElement("tr")
+  tr.innerHTML=`<td>${myData[key].name}</td>
+  <td>${myData[key].email}</td>`
+  myBody.appendChild(tr)
+
+}
+
+}).catch((error)=>{
+    console.error("Failed to get data",error)
+})
+
+    myForm.addEventListener('submit',(event)=>{
+        event.preventDefault()
+
+        const formmWithData=new FormData(myForm)
+
+        fetch('https://api-db-afd53-default-rtdb.asia-southeast1.firebasedatabase.app/users.json',{
+        method:'POST',
+        body:JSON.stringify(Object.fromEntries(formmWithData)),
+        headers:{
+            'Content-Type':'application/json'
+        }
+    }).then(()=>{
+        myForm.reset()
+        window.location.href="http://127.0.0.1:5500/API/Add_Record_toDatabase/index.html"
+    }).catch((error)=>{
+        console.log("Something went wrong",error)
+    })
+    })
+   
+</script>
+
+
+</body>
+</html>
